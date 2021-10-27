@@ -1,5 +1,7 @@
 #!/bin/bash
 
 export PORT=4001
-npm install --no-package-lock
+if [ ! -d "node_modules" ]; then
+    npm install --no-package-lock
+fi
 npx -y node server.js
